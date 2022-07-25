@@ -29,5 +29,7 @@ def teste_string_para_inteiro():
   assert string_para_inteiro(linhas_teste, 4) == 5
 
 def teste_escreve_no_arquivo():
-  assert escreve_no_arquivo(1, "./exemplos/resultado1.txt" ) == ler_arquivo("./exemplos/ex2.txt")
-  assert escreve_no_arquivo(2, "./exemplos/resultado2.txt" ) == ler_arquivo("./exemplos/ex3.txt")
+  escreve_no_arquivo("1", "./exemplos/resultado1.txt", True)
+  escreve_no_arquivo("2", "./exemplos/resultado2.txt", True)
+  assert ler_arquivo("./exemplos/resultado1.txt")  == ler_arquivo("./exemplos/ex2.txt")
+  assert ler_arquivo("./exemplos/resultado2.txt")  == ler_arquivo("./exemplos/ex3.txt")

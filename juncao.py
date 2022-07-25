@@ -17,3 +17,12 @@ def menor_valor(valor_1, valor_2):
 
 def string_para_inteiro(linhas, indice):
   return int(linhas[indice][0])
+
+def escreve_no_arquivo(valor, arquivo, ultimo):
+  with open(arquivo, "w", encoding="utf-8") as arquivo_aberto:
+    if ultimo:
+      arquivo_aberto.writelines(valor)
+      arquivo_aberto.close()
+    else:
+      arquivo_aberto.writelines(valor + "\n")
+      arquivo_aberto.close()
