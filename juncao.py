@@ -14,3 +14,6 @@ def menor_valor(valor_1, valor_2):
     return "Segundo"
   else:
     return "Iguais"
+
+def string_para_inteiro(linhas, indice):
+  return int(linhas[indice][0])

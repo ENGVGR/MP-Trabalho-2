@@ -7,8 +7,8 @@ from juncao import menor_valor
 from juncao import string_para_inteiro
 
 def teste_ler_arquivo():
-  arquivo_teste = ["1\n", "2\n", "3\n", "4\n", "5"]
-  assert ler_arquivo("./exemplos/ex1.txt") == arquivo_teste
+  linhas = ["1\n", "2\n", "3\n", "4\n", "5"]
+  assert ler_arquivo("./exemplos/ex1.txt") == linhas
 
 def teste_menor_valor():
   assert menor_valor(1, 2) == "Primeiro"
@@ -20,9 +20,9 @@ def teste_menor_valor():
   assert menor_valor(3, 9) == "Primeiro"
 
 def teste_string_para_inteiro():
-  arquivo_teste = ["1\n", "2\n", "3\n", "4\n", "5"]
-  assert string_para_inteiro(arquivo_teste, 1) == 1
-  assert string_para_inteiro(arquivo_teste, 2) == 2
-  assert string_para_inteiro(arquivo_teste, 3) == 3
-  assert string_para_inteiro(arquivo_teste, 4) == 4
-  assert string_para_inteiro(arquivo_teste, 5) == 5
+  linhas = ["1\n", "2\n", "3\n", "4\n", "5"]
+  assert string_para_inteiro(linhas, 0) == 1
+  assert string_para_inteiro(linhas, 1) == 2
+  assert string_para_inteiro(linhas, 2) == 3
+  assert string_para_inteiro(linhas, 3) == 4
+  assert string_para_inteiro(linhas, 4) == 5
