@@ -6,6 +6,7 @@ from juncao import ler_arquivo
 from juncao import menor_valor
 from juncao import string_para_inteiro
 from juncao import escreve_no_arquivo
+from juncao import executar
 
 def teste_ler_arquivo():
   linhas_teste = ["1\n", "2\n", "3\n", "4\n", "5"]
@@ -33,3 +34,7 @@ def teste_escreve_no_arquivo():
   escreve_no_arquivo("2", "./exemplos/resultado2.txt", True)
   assert ler_arquivo("./exemplos/resultado1.txt")  == ler_arquivo("./exemplos/ex2.txt")
   assert ler_arquivo("./exemplos/resultado2.txt")  == ler_arquivo("./exemplos/ex3.txt")
+
+def teste_executar():
+  executar("./exemplos/ex4.txt", "./exemplos/ex5.txt", "./exemplos/resultado3.txt")
+  assert ler_arquivo("./exemplos/resultado3.txt")  == ler_arquivo("./exemplos/ex6.txt")
