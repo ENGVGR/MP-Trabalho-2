@@ -1,17 +1,25 @@
 """
+@file testa_juncao.py
 Teste para as funções em juncao.py
 """
 
+# Imports
 from juncao import ler_arquivo
 from juncao import menor_valor
 from juncao import string_para_inteiro
 from juncao import executar
 
 def teste_ler_arquivo():
+  """! Testa a abertura e leitura dos arquivos.
+    Para isso é fornecido o arquivo para a função "ler_arquivo) e comparado com a linhas_teste que representa o resultado esperado
+  """
   linhas_teste = ["1\n", "2\n", "3\n", "4\n", "5"]
   assert ler_arquivo("./exemplos/ex1.txt") == linhas_teste
 
 def teste_menor_valor():
+  """! Testa se a função "menor_valor" retorna o menor valor.
+    Para isso é fornecido dois valores e é comparado ao resultado esperado
+  """
   assert menor_valor(1, 2) == "Primeiro"
   assert menor_valor(1, 1) == "Iguais"
   assert menor_valor(2, 1) == "Segundo"
@@ -26,6 +34,10 @@ def teste_menor_valor():
   assert menor_valor(1000, 400) == "Segundo"
 
 def teste_string_para_inteiro():
+  """! Testa se a função "string_para_inteiro" retorna o valor convertido em inteiro.
+    Para isso é fornecido dois valores, a lista de elementos e o indice do elemento desejado. 
+    Ao final é comparado com o resultado esperado.
+  """
   linhas_teste = ["1\n", "2\n", "3\n", "4\n", "5"]
   assert string_para_inteiro(linhas_teste, 0) == 1
   assert string_para_inteiro(linhas_teste, 1) == 2
@@ -34,6 +46,11 @@ def teste_string_para_inteiro():
   assert string_para_inteiro(linhas_teste, 4) == 5
 
 def teste_executar():
+  """! Testa a execução do programa inteiro, inclusive se os caminhos percorridos estão sendo armazenados.
+    Para isso é fornecido 4 valores para a função "executar", que são os dois arquivos que serão combinados, 
+    o arquivo onde será armazenado o resultado e um valor booleano indicano se é a primeira execução da função ou não.
+    Ao final é comparado aos resultados esperados.
+  """
   resultado = "./exemplos/resultado.txt"
   exemplo = "./exemplos/ex"
   caminhos = ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n",
