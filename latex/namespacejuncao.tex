@@ -1,0 +1,120 @@
+\hypertarget{namespacejuncao}{}\doxysection{juncao Namespace Reference}
+\label{namespacejuncao}\index{juncao@{juncao}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacejuncao_a6d33da9686f0942a237dec624b5d8b8d}{ler\+\_\+arquivo}} (arquivo)
+\begin{DoxyCompactList}\small\item\em Abre o arquivo e armazena o seu conteudo na variável \char`\"{}linhas\char`\"{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacejuncao_a7e1fa768bb9f071ecb9da50e26b96f6b}{menor\+\_\+valor}} (valor\+\_\+1, valor\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compara dois inteiros e retorna qual o menor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacejuncao_ac700588c70673aa2ea5b47f51df27b83}{string\+\_\+para\+\_\+inteiro}} (linhas, indice)
+\begin{DoxyCompactList}\small\item\em Converte a string da lista \char`\"{}linhas\char`\"{} em inteiro. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacejuncao_a54a8a79d78171d7ec2963e64eb57060a}{caminho\+\_\+percorrido}} (caminho, primeiro=False)
+\begin{DoxyCompactList}\small\item\em Escreve no arquivo \char`\"{}caminhos\char`\"{} o caminho percorrido. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacejuncao_ac7b0185d4db70e373f9fbed9962ae36b}{executar}} (arquivo\+\_\+1, arquivo\+\_\+2, arquivo\+\_\+resultante, primeiro)
+\begin{DoxyCompactList}\small\item\em Função que executa o programa de ler 2 arquivos e combiná-\/los ordenadamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file
+Funções para juntar dois arquivos .txt ordenados em um arquivo .txt ordenado
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacejuncao_a54a8a79d78171d7ec2963e64eb57060a}\label{namespacejuncao_a54a8a79d78171d7ec2963e64eb57060a}} 
+\index{juncao@{juncao}!caminho\_percorrido@{caminho\_percorrido}}
+\index{caminho\_percorrido@{caminho\_percorrido}!juncao@{juncao}}
+\doxysubsubsection{\texorpdfstring{caminho\_percorrido()}{caminho\_percorrido()}}
+{\footnotesize\ttfamily def juncao.\+caminho\+\_\+percorrido (\begin{DoxyParamCaption}\item[{}]{caminho,  }\item[{}]{primeiro = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Escreve no arquivo \char`\"{}caminhos\char`\"{} o caminho percorrido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em caminho} & Lista de elementos. \\
+\hline
+{\em primeiro} & Valor booleano que representa se é o primeiro termo do arquivo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacejuncao_ac7b0185d4db70e373f9fbed9962ae36b}\label{namespacejuncao_ac7b0185d4db70e373f9fbed9962ae36b}} 
+\index{juncao@{juncao}!executar@{executar}}
+\index{executar@{executar}!juncao@{juncao}}
+\doxysubsubsection{\texorpdfstring{executar()}{executar()}}
+{\footnotesize\ttfamily def juncao.\+executar (\begin{DoxyParamCaption}\item[{}]{arquivo\+\_\+1,  }\item[{}]{arquivo\+\_\+2,  }\item[{}]{arquivo\+\_\+resultante,  }\item[{}]{primeiro }\end{DoxyParamCaption})}
+
+
+
+Função que executa o programa de ler 2 arquivos e combiná-\/los ordenadamente. 
+
+E armazenar o caminho percorrido durante esse processo. Para isso são comparados cada valor de um arquivo com o outro e escrito no arquivo resultante o menor dentre esses valores. 
+\begin{DoxyParams}{Parameters}
+{\em arquivo\+\_\+1} & Arquivo .txt que será lido. \\
+\hline
+{\em arquivo\+\_\+2} & Arquivo .txt que será lido. \\
+\hline
+{\em arquivo\+\_\+resultante} & Arquivo .txt onde será armazenado o resultado. \\
+\hline
+{\em primeiro} & Valor Booleano que define se é a primeira execução do programa ou não (para armazenar todos os caminhos em um único arquivo). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacejuncao_a6d33da9686f0942a237dec624b5d8b8d}\label{namespacejuncao_a6d33da9686f0942a237dec624b5d8b8d}} 
+\index{juncao@{juncao}!ler\_arquivo@{ler\_arquivo}}
+\index{ler\_arquivo@{ler\_arquivo}!juncao@{juncao}}
+\doxysubsubsection{\texorpdfstring{ler\_arquivo()}{ler\_arquivo()}}
+{\footnotesize\ttfamily def juncao.\+ler\+\_\+arquivo (\begin{DoxyParamCaption}\item[{}]{arquivo }\end{DoxyParamCaption})}
+
+
+
+Abre o arquivo e armazena o seu conteudo na variável \char`\"{}linhas\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arquivo} & Arquivo em formato .txt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conteudo contido no arquivo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacejuncao_a7e1fa768bb9f071ecb9da50e26b96f6b}\label{namespacejuncao_a7e1fa768bb9f071ecb9da50e26b96f6b}} 
+\index{juncao@{juncao}!menor\_valor@{menor\_valor}}
+\index{menor\_valor@{menor\_valor}!juncao@{juncao}}
+\doxysubsubsection{\texorpdfstring{menor\_valor()}{menor\_valor()}}
+{\footnotesize\ttfamily def juncao.\+menor\+\_\+valor (\begin{DoxyParamCaption}\item[{}]{valor\+\_\+1,  }\item[{}]{valor\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compara dois inteiros e retorna qual o menor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor\+\_\+1} & Valor inteiro. \\
+\hline
+{\em valor\+\_\+2} & Valor inteiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna qual o menor valor\+: \char`\"{}\+Primeiro\char`\"{}, \char`\"{}\+Segundo\char`\"{} ou, caso sejam iguais, \char`\"{}\+Iguais\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacejuncao_ac700588c70673aa2ea5b47f51df27b83}\label{namespacejuncao_ac700588c70673aa2ea5b47f51df27b83}} 
+\index{juncao@{juncao}!string\_para\_inteiro@{string\_para\_inteiro}}
+\index{string\_para\_inteiro@{string\_para\_inteiro}!juncao@{juncao}}
+\doxysubsubsection{\texorpdfstring{string\_para\_inteiro()}{string\_para\_inteiro()}}
+{\footnotesize\ttfamily def juncao.\+string\+\_\+para\+\_\+inteiro (\begin{DoxyParamCaption}\item[{}]{linhas,  }\item[{}]{indice }\end{DoxyParamCaption})}
+
+
+
+Converte a string da lista \char`\"{}linhas\char`\"{} em inteiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linhas} & Lista de elementos. \\
+\hline
+{\em indice} & Valor inteiro do indice desejado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o elemento, no indice fornecido, convertido para inteiro 
+\end{DoxyReturn}
