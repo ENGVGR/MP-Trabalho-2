@@ -34,10 +34,10 @@ def teste_string_para_inteiro():
   assert string_para_inteiro(linhas_teste, 4) == 5
 
 def teste_executar():
-  executar("./exemplos/ex7.txt", "./exemplos/ex7.txt", "./exemplos/resultado4.txt")
+  executar("./exemplos/ex7.txt", "./exemplos/ex7.txt", "./exemplos/resultado4.txt", True)
   assert ler_arquivo("./exemplos/resultado4.txt")  == ler_arquivo("./exemplos/ex7.txt")
-  assert ler_arquivo("./exemplos/caminhos1.txt")  == ["ABCED"]
+  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n"]
 
-  executar("./exemplos/ex4.txt", "./exemplos/ex5.txt", "./exemplos/resultado3.txt")
+  executar("./exemplos/ex4.txt", "./exemplos/ex5.txt", "./exemplos/resultado3.txt", False)
   assert ler_arquivo("./exemplos/resultado3.txt")  == ler_arquivo("./exemplos/ex6.txt")
   
