@@ -52,7 +52,7 @@ def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
 
       if len(linhas_1) == 0 or len(linhas_2) == 0:
 
-        if len(arquivo_1) > 0:
+        if len(linhas_1) > 0:
           valor_1 = string_para_inteiro(linhas_1, 0)
 
           if ultimo:
@@ -73,6 +73,7 @@ def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
           linhas_2.pop(0)
 
       else:
+        caminho_percorrido("F")
         valor_1 = string_para_inteiro(linhas_1, 0)
         valor_2 = string_para_inteiro(linhas_2, 0)
 
