@@ -16,7 +16,7 @@ def menor_valor(valor_1, valor_2):
     return "Iguais"
 
 def string_para_inteiro(linhas, indice):
-  return int(linhas[indice][0])
+  return int(linhas[indice])
 
 def executar(arquivo_1, arquivo_2, arquivo_resultante):
   linhas_1 = ler_arquivo(arquivo_1) 
