@@ -65,4 +65,12 @@ def teste_executar():
   executar("./exemplos/ex15.txt", "./exemplos/ex16.txt", "./exemplos/resultado.txt", False)
   assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex17.txt")
   assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n"]
+
+  executar("./exemplos/ex18.txt", "./exemplos/ex19.txt", "./exemplos/resultado.txt", False)
+  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex20.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n", "ABCEFGFHFHD\n"]
+
+  executar("./exemplos/ex21.txt", "./exemplos/ex22.txt", "./exemplos/resultado.txt", False)
+  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex23.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n", "ABCEFGFHFHD\n", "ABCEFGFHFID\n"]
   
