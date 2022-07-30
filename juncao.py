@@ -88,8 +88,16 @@ def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
           caminho_percorrido("I")
 
         else:
-          arquivo_resultante_aberto.writelines(str(valor_2) + "\n")
-          linhas_2.pop(0)
+          if len(linhas_1) + len(linhas_2) == 2:
+            arquivo_resultante_aberto.writelines(str(valor_1) + "\n")
+            arquivo_resultante_aberto.writelines(str(valor_2))
+            linhas_1.pop(0)
+            linhas_2.pop(0)
+          else:
+            arquivo_resultante_aberto.writelines(str(valor_1) + "\n")
+            arquivo_resultante_aberto.writelines(str(valor_2) + "\n")
+            linhas_1.pop(0)
+            linhas_2.pop(0)
           caminho_percorrido("H")
 
     arquivo_resultante_aberto.close()
