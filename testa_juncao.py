@@ -34,43 +34,48 @@ def teste_string_para_inteiro():
   assert string_para_inteiro(linhas_teste, 4) == 5
 
 def teste_executar():
-  executar("./exemplos/ex2.txt", "./exemplos/ex2.txt", "./exemplos/resultado.txt", True)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex2.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n"]
+  resultado = "./exemplos/resultado.txt"
+  exemplo = "./exemplos/ex"
+  caminhos = ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n",
+    "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n", "ABCEFGFHFHD\n",
+    "ABCEFGFHFID\n"]
 
-  executar("./exemplos/ex3.txt", "./exemplos/ex4.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex5.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n"]
+  executar(exemplo + "2.txt", exemplo + "2.txt", resultado, True)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "2.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:1]
 
-  executar("./exemplos/ex3.txt", "./exemplos/ex3.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex6.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n"]
+  executar(exemplo + "3.txt", exemplo + "4.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "5.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:2]
 
-  executar("./exemplos/ex4.txt", "./exemplos/ex3.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex5.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n"]
+  executar(exemplo + "3.txt", exemplo + "3.txt", resultado, False)
+  assert ler_arquivo(resultado) == ler_arquivo(exemplo + "6.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:3]
 
-  executar("./exemplos/ex7.txt", "./exemplos/ex8.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex9.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n"]
+  executar(exemplo + "4.txt", exemplo + "3.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "5.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:4]
 
-  executar("./exemplos/ex10.txt", "./exemplos/ex11.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex12.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n"]
+  executar(exemplo + "7.txt", exemplo + "8.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "9.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:5]
 
-  executar("./exemplos/ex13.txt", "./exemplos/ex14.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex9.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n"]
+  executar(exemplo + "10.txt", exemplo + "11.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "12.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:6]
 
-  executar("./exemplos/ex15.txt", "./exemplos/ex16.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex17.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n"]
+  executar(exemplo + "13.txt", exemplo + "14.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "9.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:7]
 
-  executar("./exemplos/ex18.txt", "./exemplos/ex19.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex20.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n", "ABCEFGFHFHD\n"]
+  executar(exemplo + "15.txt", exemplo + "16.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "17.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:8]
 
-  executar("./exemplos/ex21.txt", "./exemplos/ex22.txt", "./exemplos/resultado.txt", False)
-  assert ler_arquivo("./exemplos/resultado.txt")  == ler_arquivo("./exemplos/ex23.txt")
-  assert ler_arquivo("./exemplos/caminhos.txt")  == ["ABCED\n", "ABCEFGD\n", "ABCEFHD\n", "ABCEFID\n", "ABCEFGFGFGD\n", "ABCEFGFGFHD\n", "ABCEFGFGFID\n", "ABCEFGFHFGD\n", "ABCEFGFHFHD\n", "ABCEFGFHFID\n"]
-  
+  executar(exemplo + "18.txt", exemplo + "19.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "20.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:9]
+
+  executar(exemplo + "21.txt", exemplo + "22.txt", resultado, False)
+  assert ler_arquivo(resultado)  == ler_arquivo(exemplo + "23.txt")
+  assert ler_arquivo("./exemplos/caminhos.txt")  == caminhos[0:10]

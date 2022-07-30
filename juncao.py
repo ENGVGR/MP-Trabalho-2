@@ -19,31 +19,32 @@ def string_para_inteiro(linhas, indice):
   return int(linhas[indice])
 
 def caminho_percorrido(caminho, primeiro=False):
+  caminhos = "./exemplos/caminhos.txt"
   if primeiro:
     if caminho == "D":
-      with open('./exemplos/caminhos.txt', 'w') as arq:
+      with open(caminhos, "w", encoding="utf-8") as arq:
         arq.write("D\n")
     else:
-      with open('./exemplos/caminhos.txt', 'w') as arq:
+      with open(caminhos, "w", encoding="utf-8") as arq:
         arq.write(caminho)
   else:
     if caminho == "D":
-      with open('./exemplos/caminhos.txt', 'a') as arq:
+      with open(caminhos, "a", encoding="utf-8") as arq:
         arq.write("D\n")
     else:
-      with open('./exemplos/caminhos.txt', 'a') as arq:
+      with open(caminhos, "a", encoding="utf-8") as arq:
         arq.write(caminho)
 
 
 def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
   caminho_percorrido("A",primeiro)
-  linhas_1 = ler_arquivo(arquivo_1) 
-  linhas_2 = ler_arquivo(arquivo_2) 
+  linhas_1 = ler_arquivo(arquivo_1)
+  linhas_2 = ler_arquivo(arquivo_2)
   caminho_percorrido("BC")
   ultimo = False
-  
 
-  with open(arquivo_resultante, "w", encoding="utf-8") as arquivo_resultante_aberto:
+  with open(arquivo_resultante, "w",
+    encoding="utf-8") as arquivo_resultante_aberto:
     caminho_percorrido("E")
     while len(linhas_1) + len(linhas_2) > 0:
 
@@ -59,7 +60,7 @@ def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
             arquivo_resultante_aberto.writelines(str(valor_1))
 
           else:
-            arquivo_resultante_aberto.writelines(str(valor_1) + "\n")    
+            arquivo_resultante_aberto.writelines(str(valor_1) + "\n")
           linhas_1.pop(0)
 
         else:
@@ -69,7 +70,7 @@ def executar(arquivo_1, arquivo_2, arquivo_resultante, primeiro):
             arquivo_resultante_aberto.writelines(str(valor_2))
 
           else:
-            arquivo_resultante_aberto.writelines(str(valor_2) + "\n")  
+            arquivo_resultante_aberto.writelines(str(valor_2) + "\n")
           linhas_2.pop(0)
 
       else:
